@@ -1,0 +1,19 @@
+{
+  "name": "demoblaze-cypress-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:smoke": "cypress run --spec 'cypress/e2e/smoke/**/*.cy.js'",
+    "cy:login": "cypress run --spec 'cypress/e2e/login/**/*.cy.js'",
+    "cy:chrome": "cypress run --browser chrome",
+    "cy:headed": "cypress run --headed",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "cypress": "^15.14.0",
+    "dotenv": "^16.6.1",
+    "eslint": "^9.25.1"
+  }
+}
