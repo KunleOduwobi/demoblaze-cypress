@@ -1,8 +1,5 @@
 class CartPage {
-  visit() {
-    cy.visit('/cart.html');
-  }
-
+  
   assertProductInCart(productName) {
     cy.get('#tbodyid').should('contain', productName);
   }
