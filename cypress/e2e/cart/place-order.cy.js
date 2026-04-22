@@ -3,7 +3,7 @@ import ProductPage from '../../support/pages/ProductPage';
 import CartPage from '../../support/pages/CartPage';
 import PlaceOrderModal from '../../support/pages/PlaceOrderModal';
 
-describe('Place order UI', () => {
+describe('Place order', () => {
   beforeEach(() => {
     cy.fixture('order').as('order');
   });

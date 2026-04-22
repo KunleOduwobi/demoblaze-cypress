@@ -8,11 +8,11 @@ class LoginModal {
   }
 
   submit() {
-    cy.get('#logInModal').should('be.visible');
     cy.get('#logInModal').contains('button', 'Log in').click();
   }
 
   login(username, password) {
+    cy.get('#logInModal').should('be.visible');
     this.enterUsername(username);
     this.enterPassword(password);
     this.submit();

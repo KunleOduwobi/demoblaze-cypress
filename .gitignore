@@ -1,11 +1,12 @@
 # Dependencies
 node_modules/
-package-lock.json
 
 # Environment variables
 .env
+.env.*
 .env.local
 .env.*.local
+.env.example
 
 # Cypress test artifacts
 cypress/screenshots/
