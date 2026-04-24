@@ -18,7 +18,7 @@ class PlaceOrderModal {
   }
 
   confirmSuccess() {
-    cy.contains('button', 'OK').click();
+    cy.contains('button', 'OK').should('be.visible').click();
   }
 }
 
