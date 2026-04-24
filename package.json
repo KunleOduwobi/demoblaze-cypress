@@ -5,13 +5,15 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:smoke": "cypress run --spec 'cypress/e2e/smoke/**/*.cy.js'",
-    "cy:login": "cypress run --spec 'cypress/e2e/login/**/*.cy.js'",
+    "cy:login": "cypress run --spec 'cypress/e2e/auth/**/*.cy.js'",
+    "cy:login:grep": "cypress run --expose grepTags='@login',grepFilterSpecs=true --browser chrome --headed",
+    "cy:negative": "cypress run --expose grepTags='@negative', grepFilterSpecs=true  --browser chrome --headed",
     "cy:chrome": "cypress run --browser chrome",
     "cy:headed": "cypress run --headed",
     "lint": "eslint ."
   },
   "devDependencies": {
+    "@cypress/grep": "^6.0.0",
     "cypress": "^15.14.0",
     "dotenv": "^16.6.1",
     "eslint": "^9.25.1"
