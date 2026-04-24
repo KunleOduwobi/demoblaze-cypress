@@ -1,7 +1,7 @@
 class CartPage {
   
   assertProductInCart(productName) {
-    cy.get('#tbodyid').should('contain', productName);
+    cy.get('#tbodyid').should('be.visible').and('contain', productName);
   }
 
   clickPlaceOrder() {
@@ -9,6 +9,7 @@ class CartPage {
   }
 
   assertCartEmpty() {
+    cy.contains('h2', 'Products').should('be.visible')
     cy.get('#tbodyid tr').should('have.length', 0);
   }
 }
