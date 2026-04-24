@@ -5,9 +5,10 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:login": "cypress run --spec 'cypress/e2e/auth/**/*.cy.js'",
-    "cy:login:grep": "cypress run --expose grepTags='@login',grepFilterSpecs=true --browser chrome --headed",
-    "cy:negative": "cypress run --expose grepTags='@negative', grepFilterSpecs=true  --browser chrome --headed",
+    "cy:smoke": "cypress run --expose grepTags='@smoke',grepFilterSpecs=true  --browser chrome",
+    "cy:auth": "cypress run --spec 'cypress/e2e/auth/**/*.cy.js'",
+    "cy:login:headed": "cypress run --expose grepTags='@login',grepFilterSpecs=true --browser chrome --headed",
+    "cy:negative:headed": "cypress run --expose grepTags='@negative', grepFilterSpecs=true  --browser chrome --headed",
     "cy:chrome": "cypress run --browser chrome",
     "cy:headed": "cypress run --headed",
     "lint": "eslint ."
