@@ -14,6 +14,11 @@ module.exports = defineConfig({
     retries: {
       runMode: 2,
       openMode: 0
-    }
+    },
+    setupNodeEvents(on, config) {
+      const { plugin: cypressGrepPlugin } = require('@cypress/grep/plugin');
+      cypressGrepPlugin(config);
+      return config;
+    },
   }
 });
